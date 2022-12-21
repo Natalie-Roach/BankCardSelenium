@@ -37,7 +37,7 @@ public class BankCardTest {
 
     @Test
     public void shouldTestNormalNameSurname() {
-        driver.get("http://localhost:7777/");
+        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Мария Петрова");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79881234567");
         driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
@@ -49,7 +49,7 @@ public class BankCardTest {
 
     @Test
     public void shouldTestSmallLettersNameSurname() {
-        driver.get("http://localhost:7777/");
+        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("мария петрова");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79881234567");
         driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
@@ -61,7 +61,7 @@ public class BankCardTest {
 
     @Test
     public void shouldTestDoubleNameSurname() {
-        driver.get("http://localhost:7777/");
+        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Анна-Мария Петрова-Иванова");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79881234567");
         driver.findElement(By.cssSelector("label[data-test-id=agreement]")).click();
@@ -70,5 +70,5 @@ public class BankCardTest {
         String actual = driver.findElement(By.cssSelector("p[data-test-id=order-success]")).getText().trim();
         assertEquals(expected, actual);
     }
-    
+
 }
